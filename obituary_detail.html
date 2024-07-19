@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ obituary.seo_title }}</title>
+    <meta name="description" content="{{ obituary.seo_description }}">
+    <meta name="description" content="{{ obituary.seo_description }}">
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="{{ obituary.seo_title }}">
+    <meta property="og:description" content="{{ obituary.seo_description }}">
+    <meta property="og:image" content="{{ obituary.photo.url }}">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+    <h1>{{ obituary.name }}</h1>
+    <p>{{ obituary.birth_date }} - {{ obituary.death_date }}</p>
+    <p>{{ obituary.biography }}</p>
+    <img src="{{ obituary.photo.url }}" alt="{{ obituary.name }}">
+</body>
+</html>

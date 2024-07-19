@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obituaries</title>
+</head>
+<body>
+    <h1>Obituaries</h1>
+    <ul>
+        {% for obituary in obituaries %}
+        <li><a href="{% url 'obituary_detail' obituary.pk %}">{{ obituary.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
